@@ -1,0 +1,42 @@
+body {
+    background-color: white;
+}
+
+.image-container {
+    background-color: #ffffff;
+    padding: 5px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+.footer {
+    margin-top: auto;
+    background-color: #000;
+    color: white;
+    font-size: 25px;
+    padding: 5px 0;
+    text-align: center;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+}
+
+.navbar-hostname {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.image-card {
+    transition: transform 0.2s;
+}
+
+.image-card:hover {
+    transform: scale(1.05);
+}
+
+.image-card img {
+    max-height: 200px;
+    object-fit: cover;
+}
