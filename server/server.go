@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"imageServer/cmd/app"
 	"log"
+	"math/rand"
 	"net/http"
 	"os"
 	"path/filepath"
@@ -48,13 +49,15 @@ func main() {
 		// Seleccionar al azar tres imágenes si hay suficientes
 		if len(images) > 0 {
 
-			// Si hay menos de tres imágenes, seleccionarlas todas
-			numImagesToSelect := 3
-			if len(images) < 4 {
+			// Generar un número aleatorio entre 3 y 4 para la cantidad de imágenes
+			numImagesToSelect := 3 + rand.Intn(2) // rand.Intn(2) genera 0 o 1, por lo tanto 3+0=3 o 3+1=4
+
+			// Si hay menos imágenes que el número seleccionado, ajustarlo
+			if len(images) < numImagesToSelect {
 				numImagesToSelect = len(images)
 			}
 
-			// Seleccionar al azar `numImagesToSelect` imágenes
+			// Seleccionar al azar numImagesToSelect imágenes
 			randomImages := app.GetRandomImages(images, numImagesToSelect)
 
 			// Codificar y almacenar las imágenes seleccionadas
