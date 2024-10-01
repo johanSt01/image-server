@@ -2,12 +2,18 @@ body {
     background-color: white;
 }
 
+.img-fluid {
+    max-height: 300px;
+    object-fit: cover;
+}
+
 .image-container {
-    background-color: #ffffff;
+    background-color: black;
     padding: 5px;
     border-radius: 2px;
     margin-bottom: 20px;
     font-size: 20px;
+    color: aqua;
 }
 
 .footer {

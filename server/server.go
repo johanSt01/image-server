@@ -50,7 +50,7 @@ func main() {
 
 			// Si hay menos de tres imágenes, seleccionarlas todas
 			numImagesToSelect := 3
-			if len(images) < 3 {
+			if len(images) < 4 {
 				numImagesToSelect = len(images)
 			}
 

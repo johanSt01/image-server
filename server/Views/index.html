@@ -29,10 +29,10 @@
 
     <!-- Contenedor principal -->
     <div class="container mt-4">
-        <div class="row justify-content-center">
-            {{range .Images}}
+        <div class="row d-flex justify-content-center">
+            {{range $index, $element := .Images}}
             <!-- Imagen -->
-            <div class="col-md-4">
+            <div class="col-12 col-md-4 {{if eq (len $.Images) 4}}col-lg-6{{else}}col-lg-4{{end}} mb-4 d-flex justify-content-center">
                 <div class="image-container text-center image-card">
                     <img src="data:image/jpeg;base64,{{.Base64Img}}" alt="{{.Name}}" class="img-fluid">
                     <p class="mt-3">{{.Name}}</p>
